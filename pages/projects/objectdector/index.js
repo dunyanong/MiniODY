@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 import { FaRocket } from 'react-icons/fa'
-import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,14 +16,13 @@ export default function Home() {
       <div className='min-h-screen flex flex-col'>
         <Navbar />
         <main className="flex-1 mt-10 mx-auto sm:mt-12 md:mt-16 lg:mt-20 pb-48 xs:overflow-hidden md:overflow-visible">
-          <h1 className="text-3xl mx-auto font-extrabold tracking-tight text-white sm:text-4xl pb-4 sm:pb-4">Mini AI Projects</h1>
+          <h1 className="text-3xl mx-auto font-extrabold tracking-tight text-white sm:text-4xl pb-4 sm:pb-4">All Projects</h1>
           <p className="text-base text-gray-500 sm:text-lg mx-auto md:text-xl lg:mx-0 pb-4 sm:pb-4">Explore Dun Yan's mini AI/Data Science related projects that I built since I started to learn how to code <br />Enjoy ~ :)</p>
-          <Link href='/projects' legacyBehavior>
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold my-3 py-2 px-4 rounded flex items-center w-32 sm:w-32 md:w-32 lg:w-32">
-              <FaRocket className="fill-current w-4 h-4 mr-2" />
-              Explore
-            </button>
-          </Link>
+
+          <button className="bg-green-500 hover:bg-green-600 text-white font-bold my-3 py-2 px-4 rounded flex items-center">
+            <FaRocket className="fill-current w-4 h-4 mr-2" />
+            Explore
+          </button>
           <div className="mx-auto mt-20 xl:mt-28 xs:overflow-hidden md:overflow-visible">
             <h2 className="text-3xl mx-auto font-bold tracking-tight text-gray-900">The music you listen to,<br />the stats you need</h2>
           </div>       

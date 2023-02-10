@@ -14,8 +14,3 @@ body {
 .hidden {
   display: none;
 }
-
-.dropdown-menu {
-  position: absolute;
-  bottom: 0;
-}
