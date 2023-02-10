@@ -1,30 +1,32 @@
 import React, { useRef, useState, useEffect } from "react";
-import * as tf from "@tensorflow/tfjs";
 // 1. TODO - Import required model here
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import * as cocossd from '@tensorflow-models/coco-ssd';
 import Webcam from "react-webcam";
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
 // 2. TODO - Import drawing utility here
 // e.g. import { drawRect } from "./utilities";
 
-export default function Home() {
+const Demo = () => {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
+    const [loading, setLoading] = useState(true);
   
-    // Main function
-    const runCoco = async () => {
-      // 3. TODO - Load network 
-      const net = await cocossd.load();
-      
-      //  Loop and detect hands
-      setInterval(() => {
-        detect(net);
-      }, 100);
-    };
-  
+    useEffect(() => {
+      async function runCoco() {
+        // 3. TODO - Load network 
+        const net = await cocossd.load();
+        setLoading(false);
+        //  Loop and detect hands
+        setInterval(() => {
+          detect(net);
+        }, 100);
+      }
+      runCoco();
+    }, []);
+
     const drawSomething = (detections, ctx) =>{
       // Loop through each prediction
       detections.forEach(prediction => {
@@ -79,8 +81,6 @@ export default function Home() {
       }
     };
   
-    useEffect(()=>{runCoco()},[]);
-  
     return (
       <div>
         <Head>
@@ -90,12 +90,22 @@ export default function Home() {
         </Head>
         <div className='min-h-screen flex flex-col'>
           <Navbar />
-          <div class="relative h-full w-full my-10 mx-5">
-            <Webcam ref={webcamRef} muted={true} />
-            <canvas ref={canvasRef} class="absolute top-0 left-0 h-full w-full object-cover"/>
+          <h1 className="text-3xl mx-auto font-extrabold tracking-tight text-white sm:text-4xl pb-4 sm:pb-4">Object Detector</h1>
+          <div className="relative my-10 mx-5">
+            
+          {loading ? (
+            <div className="text-white text-center">Loading...</div>
+          ) : (
+            <div className="relative my-10 mx-5">
+              <Webcam ref={webcamRef} muted={true} className="rounded" />
+              <canvas ref={canvasRef} className="absolute top-0 left-0 h-full w-full object-cover" />
+            </div>
+          )}
           </div>
           <Footer />
         </div>
       </div>
     );  
 }
+
+export default Demo;

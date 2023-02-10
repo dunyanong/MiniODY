@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Hamburger from "./Hamburger";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,57 +10,52 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-gray-200 pt-4 rounded ">
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="/" className="flex items-center">
-          <p className="font-bold text-2xl text-white visible">
-            MiniODY
-          </p>
-        </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 ml-auto text-sm text-gray-500 rounded-lg md:hidden focus:outline-none"
-          aria-controls="navbar-default"
-          aria-expanded={isOpen}
-          onClick={handleToggle}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </button>
-			<div className={`hidden md:block ${isOpen ? "block" : "hidden"}`} id="navbar-default">
-						<ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-                <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
-                </li>
-                <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0" aria-current="page">About</a>
-                </li>                
-            </ul>
-				</div>
-        <div className={`block absolute top-0 right-0 mt-20 mr-10 md:hidden bg-gray-600 ${isOpen ? "block" : "hidden"}`} id="navbar-default" >
-          <ul className="flex flex-col p-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-            <li>
-              <a href="" className="block py-2 pl-3 pr-4 text-white rounded md:p-0" aria-current="page" onClick={handleToggle}>Home</a>
-            </li>
-            <li>
-              <a href="" className="block py-2 pl-3 pr-4 text-white rounded md:p-0" aria-current="page" onClick={handleToggle}>About Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav className=" py-5 mb-12">
+
+
+    <div className="hidden md:visible md:flex md:justify-between md:mt-3">
+    <div className="">
+        <ul className="flex items-center">
+          <Link legacyBehavior href="/">
+            <p className="font-bold text-2xl text-white hover:cursor-pointer">MiniODY</p>          
+          </Link>
+        </ul>
+    </div>
+
+    <div className="md:flex">
+        <ul className="flex justify-between gap-5">
+        <li>
+            <Link href="/" legacyBehavior>
+            <a className="text-base  font-semibold my-4 text-gray-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600">Home</a>
+            </Link> 
+        </li>
+        <li>
+            <Link href="/about" legacyBehavior>
+            <a className="text-base  font-semibold my-4 text-gray-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600">About</a>
+            </Link> 
+        </li>
+        <li>
+            <Link legacyBehavior href="/blogs">
+            <a className="text-base font-semibold my-4 text-gray-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600">Blogs</a>
+            </Link>               
+        </li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div className="flex justify-between md:mt-3 md:hidden">
+    <div className="">
+        <ul className="flex items-center">
+          <p className="font-bold text-2xl text-white">MiniODY</p>
+        </ul>
+    </div>
+
+    <div className="">            
+        <Hamburger />
+    </div>
+    </div>
+
     </nav>
 );
 };
