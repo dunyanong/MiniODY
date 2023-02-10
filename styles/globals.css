@@ -14,3 +14,7 @@ body {
 .hidden {
   display: none;
 }
+
+.block {
+  opacity: 1;
+}
