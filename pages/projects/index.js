@@ -19,13 +19,70 @@ export default function Home() {
           <h1 className="text-3xl mx-auto font-extrabold tracking-tight text-white sm:text-4xl pb-4 sm:pb-4">All Projects</h1>
           <p className="text-base text-gray-500 sm:text-lg mx-auto md:text-xl lg:mx-0 pb-4 sm:pb-4">Explore Dun Yan's mini AI/Data Science related projects that I built since I started to learn how to code <br />Enjoy ~ :)</p>
 
-          <button className="bg-green-500 hover:bg-green-600 text-white font-bold my-3 py-2 px-4 rounded flex items-center">
-            <FaRocket className="fill-current w-4 h-4 mr-2" />
-            Explore
-          </button>
-          <div className="mx-auto mt-20 xl:mt-28 xs:overflow-hidden md:overflow-visible">
-            <h2 className="text-3xl mx-auto font-bold tracking-tight text-gray-900">The music you listen to,<br />the stats you need</h2>
-          </div>       
+          <div class="pt-10 pb-20">
+          <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-12 md:gap-y-10">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-600 text-white">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+              </div></div>
+            <div class="ml-4">
+            <dt class="text-lg leading-6 font-medium text-gray-900">
+            <h3 className='text-lg leading-6 font-medium text-gray-100'>Visual recognitions</h3>
+            </dt>
+            <dd class="mt-2 text-base text-gray-500">Browse your most listened content on Spotify during last month, 6 months, or since you started using Spotify.</dd>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-600 text-white bg-">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+              </div></div>
+            <div class="ml-4">
+            <dt class="text-lg leading-6 font-medium text-gray-900">
+            <h3 className='text-lg leading-6 font-medium text-gray-100'>Voice speech</h3>
+            </dt>
+            <dd class="mt-2 text-base text-gray-500">Browse your most listened content on Spotify during last month, 6 months, or since you started using Spotify.</dd>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-600 text-white bg-">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+              </div></div>
+            <div class="ml-4">
+            <dt class="text-lg leading-6 font-medium text-gray-900">
+            <h3 className='text-lg leading-6 font-medium text-gray-100'>Custom time ranges</h3>
+            </dt>
+            <dd class="mt-2 text-base text-gray-500">Browse your most listened content on Spotify during last month, 6 months, or since you started using Spotify.</dd>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-600 text-white bg-">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+              </div></div>
+            <div class="ml-4">
+            <dt class="text-lg leading-6 font-medium text-gray-900">
+            <h3 className='text-lg leading-6 font-medium text-gray-100'>Custom time ranges</h3>
+            </dt>
+            <dd class="mt-2 text-base text-gray-500">Browse your most listened content on Spotify during last month, 6 months, or since you started using Spotify.</dd>
+            </div>
+          </div>
+          </dl>
+          </div>      
         </main>
         <Footer />
       </div>

@@ -48,18 +48,18 @@ const Navbar = () => {
                 </li>                
             </ul>
 				</div>
-        <div className={`block md:hidden ${isOpen ? "block" : "hidden"}`} id="navbar-default">
-            <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-                <li>
-                <a href="" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0" aria-current="page" onClick={handleToggle}>Home</a>
-                </li>
-                <li>
-                <a href="" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0" aria-current="page" onClick={handleToggle}>About Us</a>
-                </li>
-            </ul>
+        <div className={`block absolute top-0 right-0 mt-20 mr-10 md:hidden bg-gray-600 ${isOpen ? "block" : "hidden"}`} id="navbar-default" >
+          <ul className="flex flex-col p-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+            <li>
+              <a href="" className="block py-2 pl-3 pr-4 text-white rounded md:p-0" aria-current="page" onClick={handleToggle}>Home</a>
+            </li>
+            <li>
+              <a href="" className="block py-2 pl-3 pr-4 text-white rounded md:p-0" aria-current="page" onClick={handleToggle}>About Us</a>
+            </li>
+          </ul>
         </div>
-  </div>
-</nav>
+      </div>
+    </nav>
 );
 };
 
