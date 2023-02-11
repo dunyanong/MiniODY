@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className="">
         <ul className="flex items-center">
           <Link legacyBehavior href="/">
-            <p className="font-bold text-2xl text-white hover:cursor-pointer">MiniODY</p>          
+            <a className="font-bold text-2xl text-white hover:cursor-pointer">MiniODY</a>          
           </Link>
         </ul>
     </div>
