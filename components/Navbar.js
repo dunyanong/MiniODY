@@ -12,7 +12,6 @@ const Navbar = () => {
   return (
     <nav className=" py-5 mb-12">
 
-
     <div className="hidden md:visible md:flex md:justify-between md:mt-3">
     <div className="">
         <ul className="flex items-center">
@@ -47,7 +46,9 @@ const Navbar = () => {
     <div className="flex justify-between md:mt-3 md:hidden">
     <div className="">
         <ul className="flex items-center">
-          <p className="font-bold text-2xl text-white">MiniODY</p>
+          <Link legacyBehavior href="/">
+            <p className="font-bold text-2xl text-white hover:cursor-pointer">MiniODY</p>          
+          </Link>
         </ul>
     </div>
 
